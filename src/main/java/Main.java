@@ -10,7 +10,7 @@ public class Main {
 
         List<Thread> threads = new ArrayList<>();
 
-        long startTs = System.currentTimeMillis(); // start time
+        long startTs = System.currentTimeMillis();
 
         for (String text : texts) {
             Thread thread = new Thread(() -> {
@@ -43,7 +43,7 @@ public class Main {
             thread.join();
         }
 
-        long endTs = System.currentTimeMillis(); // end time
+        long endTs = System.currentTimeMillis();
 
         System.out.println("Time: " + (endTs - startTs) + "ms");
     }
